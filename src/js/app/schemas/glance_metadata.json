@@ -1,0 +1,126 @@
+module.exports = {
+	"additionalProperties": true,
+	"required": [
+		"label"
+	],
+	"type": "object",
+	"properties": {
+		"status": {
+			"type": [
+				{
+					"description": "A lozenge with a label text. See https://docs.atlassian.com/aui/latest/docs/lozenges.html",
+					"required": [
+						"type",
+						"value"
+					],
+					"additionalProperties": true,
+					"type": "object",
+					"properties": {
+						"type": {
+							"enum": [
+								"lozenge"
+							],
+							"type": "string"
+						},
+						"value": {
+							"additionalProperties": true,
+							"required": [
+								"type",
+								"label"
+							],
+							"type": "object",
+							"properties": {
+								"type": {
+									"enum": [
+										"default",
+										"success",
+										"error",
+										"current",
+										"new",
+										"moved"
+									],
+									"type": "string"
+								},
+								"label": {
+									"minLength": 1,
+									"type": "string",
+									"maxLength": 20
+								}
+							}
+						}
+					}
+				},
+				{
+					"description": "The icon for the glance",
+					"required": [
+						"type",
+						"value"
+					],
+					"additionalProperties": true,
+					"type": "object",
+					"properties": {
+						"type": {
+							"enum": [
+								"icon"
+							],
+							"type": "string"
+						},
+						"value": {
+							"additionalProperties": true,
+							"required": [
+								"url",
+								"url@2x"
+							],
+							"type": "object",
+							"properties": {
+								"url": {
+									"type": "string",
+									"description": "An URL to the icon"
+								},
+								"url@2x": {
+									"type": "string",
+									"description": "An URL to the high resolution icon"
+								}
+							}
+						}
+					}
+				}
+			]
+		},
+		"metadata": {
+			"additionalProperties": true,
+			"type": "object",
+			"description": "Glance metadata for conditions"
+		},
+		"label": {
+			"description": "Free form html label",
+			"required": [
+				"type",
+				"value"
+			],
+			"additionalProperties": true,
+			"type": "object",
+			"properties": {
+				"type": {
+					"enum": [
+						"html"
+					],
+					"type": "string"
+				},
+				"value": {
+					"minLength": 1,
+					"type": "string",
+					"maxLength": 1000
+				}
+			}
+		}
+	}
+};
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./src/js/app/schemas/glance_metadata.json
+ ** module id = 545
+ ** module chunks = 0
+ **/

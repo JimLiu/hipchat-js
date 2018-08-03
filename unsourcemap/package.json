@@ -1,0 +1,29 @@
+{
+  "name": "unsourcemap",
+  "version": "0.0.1",
+  "author": "Tim McCormack <cortex@brainonfire.net>",
+  "description": "Unpack a minified JS file using a source map",
+  "contributors": [
+    {
+      "name": "Chase Douglas",
+      "email": "chasedouglas@gmail.com"
+    },
+    {
+      "name": "Tim McCormack",
+      "email": "cortex@brainonfire.net"
+    }
+  ],
+  "bin": {
+    "unsourcemap": "./unsourcemap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timmc/unsourcemap.git"
+  },
+  "dependencies": {
+    "argparse": "*",
+    "falafel": "0.3.*",
+    "fs-path": "0.0.24",
+    "source-map": "0.5.*"
+  }
+}

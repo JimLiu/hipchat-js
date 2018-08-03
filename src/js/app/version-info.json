@@ -1,0 +1,12 @@
+module.exports = {
+	"connect_api_version": 1,
+	"minimum_connect_api_version": 1
+};
+
+
+/*****************
+ ** WEBPACK FOOTER
+ ** ./src/js/app/version-info.json
+ ** module id = 141
+ ** module chunks = 0
+ **/
